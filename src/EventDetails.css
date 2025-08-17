@@ -1,0 +1,70 @@
+.event-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.event-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+
+  background-image: url("./assets/scroll.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-phase {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 25px;   /* 👈 shifted a bit lower */
+  margin-bottom: 15px;
+}
+
+.event-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 95%;     /* 👈 reduced text width by 5% */
+  margin: 0 auto;
+}
+
+.event-btn {
+  margin-top: 10px;   /* 👈 moved button up slightly */
+  padding: 10px 20px;
+
+  background-color: #d4a017;
+  color: white;
+  font-weight: bold;
+
+  border: 2px solid #8b6b12;
+  border-radius: 25px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.event-btn:hover {
+  background-color: #b88b0e;
+  transform: scale(1.05);
+}
