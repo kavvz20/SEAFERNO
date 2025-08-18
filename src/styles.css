@@ -19,7 +19,7 @@ body{
   min-height:100dvh;
   display:flex;
   flex-direction:column;
-  padding:24px;
+  
 }
 
 .header{
@@ -58,7 +58,8 @@ body{
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
   padding: 48px 48px 0 48px;
   margin: 32px auto;
-  max-width: 1200px;
+  width: calc(100% - 64px);
+  max-width: 100%;
   min-height: 450px;
   position: relative;
   overflow: hidden;
@@ -221,9 +222,31 @@ body{
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
+@media (min-width: 1400px) {
   .hero {
-    max-width: 95%;
+    width: calc(100% - 80px);
+    margin: 40px auto;
+    padding: 60px 60px 0 60px;
+    min-height: 500px;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+  
+  .eyebrow {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    width: calc(100% - 64px);
     margin: 24px auto;
     padding: 40px 32px 0 32px;
     min-height: 800px;
@@ -382,5 +405,41 @@ body{
     max-width: 130px;
     padding: 0.65rem 1.1rem;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding: 16px 8px 0 8px;
+    min-height: 500px;
+    margin: 12px auto;
+  }
+  
+  .hero__copy {
+    padding-bottom: 20px;
+  }
+  
+  .ship-img {
+    width: 60%;
+    max-width: 200px;
+  }
+  
+  .title {
+    font-size: clamp(1.4rem, 8vw + 1rem, 2.2rem);
+  }
+  
+  .eyebrow {
+    font-size: 0.6rem;
+  }
+  
+  .btn {
+    max-width: 120px;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav {
+    gap: 6px;
+    font-size: 0.75rem;
   }
 }

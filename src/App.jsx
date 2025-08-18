@@ -2,7 +2,7 @@ import './styles.css';
 import Header from './Header';
 import Hero from './Hero';
 import EventDetails from "./EventDetails";
-import Sponsors from './Sponsors';
+import Sponsors from "./Sponsors";
 
 export default function App() {
   return (

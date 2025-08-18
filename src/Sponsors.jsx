@@ -1,33 +1,32 @@
-import React from 'react';
-import './Sponsors.css';
-import bgImage from './assets/bg.png';
-import S2Image from './assets/S2.jpg';
-import S5Image from './assets/S5.jpg';
-import S6Image from './assets/S6.jpg';
-import S4Image from './assets/S4.png';
+import React from "react";
+import bgImage from "./assets/bg.png";
+import rotatedBgImage from "./assets/bgrotrated.png";
+import s2 from "./assets/S2.jpg";
+import s4 from "./assets/S4.png";
+import s5 from "./assets/S5.jpg";
+import s6 from "./assets/S6.jpg";
+import "./Sponsors.css";
 
 export default function Sponsors() {
   return (
-    <section className="sponsors">
-      <div className="sponsors-container">
-        <h2 className="sponsors-heading">Our Sponsors</h2>
-        <div className="sponsors-bg-container">
-          <img 
-            src={bgImage} 
-            alt="Background banner" 
-            className="sponsors-bg-image"
-          />
-          <div className="sponsors-overlay">
-            <img src={S2Image} alt="Sponsor S2" className="sponsor-item" />
-            <img src={S5Image} alt="Sponsor S5" className="sponsor-item" />
-            <img src={S4Image} alt="Sponsor S4" className="sponsor-item" />
-            <img src={S6Image} alt="Sponsor S6" className="sponsor-item" />
-          </div>
-        </div>
-        <div className="sponsors-content">
-          <div className="sponsors-text">
-            {/* Sponsor content can be added here */}
-          </div>
+    <section className="sponsors-section">
+      <h1 className="sponsors-heading">Our Sponsors</h1>
+      <div className="sponsors-image-container">
+        <img 
+          src={bgImage} 
+          alt="Sponsors Background" 
+          className="sponsors-bg-image"
+        />
+        <img 
+          src={rotatedBgImage} 
+          alt="Sponsors Background Rotated" 
+          className="sponsors-rotated-bg-image"
+        />
+        <div className="sponsor-logos">
+          <img src={s2} alt="Sponsor S2" className="sponsor-logo" />
+          <img src={s4} alt="Sponsor S4" className="sponsor-logo" />
+          <img src={s5} alt="Sponsor S5" className="sponsor-logo" />
+          <img src={s6} alt="Sponsor S6" className="sponsor-logo" />
         </div>
       </div>
     </section>
