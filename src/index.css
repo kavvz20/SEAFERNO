@@ -1,3 +1,11 @@
+@import './styles.css';  /* must come first */
+
+/* Apply custom font globally to headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'The Rum is Gone', serif;
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +21,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,14 +33,15 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: block;
+  /* background: none !important;  */
 }
 
+
 h1 {
-  font-size: 3.2em;
+  font-size: 5.2em;
   line-height: 1.1;
 }
 

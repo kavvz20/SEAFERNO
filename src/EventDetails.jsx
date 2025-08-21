@@ -1,5 +1,5 @@
-import React from "react";
-import scrollBg from "./assets/scroll.png"; // parchment image in src/assets
+import React, { useState } from "react";
+import RulebookCard from "./RulebookCard";
 import "./EventDetails.css"; // import CSS file
 
 const events = [
@@ -18,19 +18,21 @@ const events = [
 ];
 
 export default function EventDetails() {
+  const [showPopup, setShowPopup] = useState(null);
+
   return (
     <section className="event-section">
-      <h1 className="event-heading">Event Details</h1>
-
+      <h1 className="event-heading" > Event Details</h1>
       <div className="event-container">
         {events.map((event, index) => (
-          <div key={index} className="event-card">
-            <div>
-              <h2 className="event-phase">{event.phase}</h2>
-              <p className="event-desc">{event.desc}</p>
-            </div>
-            <button className="event-btn">View Details</button>
-          </div>
+          <RulebookCard
+            key={index}
+            phase={event.phase}
+            desc={event.desc}
+            index={index}
+            showPopup={showPopup}
+            setShowPopup={setShowPopup}
+          />
         ))}
       </div>
     </section>

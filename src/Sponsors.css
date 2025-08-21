@@ -1,13 +1,7 @@
-@font-face {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'The Rum is Gone';
-  src: url('src\fonts\TheRumIsGone-Wy1nG.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'The Rum is Gone', serif;
-}
 .sponsors-section {
   padding: 0.1rem 2rem 0.5rem 2rem;
   text-align: center;
@@ -16,6 +10,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-image: url('./assets/down2.jpg');
+  
 
   /* Reduce unnecessary bottom space */
   margin-bottom: 0;
@@ -26,9 +22,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3.5rem;
   font-weight: bold;
   color: black;
-  margin-bottom: 0.25rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+ 
 }
 
 .sponsor-logos {
@@ -36,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .sponsor-logo {
@@ -72,11 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   width: auto; /* shrink-wrap logos */
 }
 
-/* Subtle individual tilts for pasted effect */
-.sponsors-image-container .sponsor-logos .sponsor-logo:nth-child(1) { transform: rotate(-3deg); }
-.sponsors-image-container .sponsor-logos .sponsor-logo:nth-child(2) { transform: rotate(2deg); }
-.sponsors-image-container .sponsor-logos .sponsor-logo:nth-child(3) { transform: rotate(-1.5deg); }
-.sponsors-image-container .sponsor-logos .sponsor-logo:nth-child(4) { transform: rotate(3deg); }
+
 
 .sponsors-bg-image,
 .sponsors-rotated-bg-image {
@@ -159,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .sponsors-image-container { 
     height: auto; 
-    max-width: 400px; 
+    max-width: 400px;
+
   }
 }
