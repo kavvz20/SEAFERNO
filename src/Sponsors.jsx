@@ -9,7 +9,7 @@ import "./Sponsors.css";
 
 export default function Sponsors() {
   return (
-    <section className="sponsors-section">
+    <section id="sponsors" className="sponsors-section">
       <h1 className="sponsors-heading">Our Sponsors</h1>
       <div className="sponsors-image-container">
         <img 

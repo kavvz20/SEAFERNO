@@ -10,12 +10,13 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: url('./assets/down2.jpg');
+  /* background-image: url('./assets/down2.jpg'); */
   
 
   /* Reduce unnecessary bottom space */
   margin-bottom: 0;
   padding-bottom: 0.5rem;
+  scroll-margin-top: 80px; /* Ensure proper navigation positioning */
 }
 
 .sponsors-heading {

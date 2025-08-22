@@ -23,10 +23,29 @@
   align-items: center;
 }
 
+.popup-content.closing {
+  animation: popup-slide-fade-out 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
 @keyframes popup-slide-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes popup-slide-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-60px);
   }
 }
 
@@ -50,6 +69,19 @@
   cursor: pointer;
   color: #333;
   line-height: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .rulebook-label-popup-overlay {

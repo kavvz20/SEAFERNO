@@ -19,7 +19,7 @@ export default function EventCard(props) {
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <img
-              src={require("/SEAFERNO\src\assets\rulebook.jpg")}
+              src={require("/SEAFERNO\src\assets\rulebook1.png")}
               alt="Rulebook"
               style={{ maxWidth: "90vw", maxHeight: "90vh" }}
             />

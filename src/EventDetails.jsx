@@ -2,28 +2,28 @@ import React, { useState } from "react";
 import RulebookCard from "./RulebookCard";
 import "./EventDetails.css"; // import CSS file
 
-const events = [
-  {
-    phase: "Phase 1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae orci nec purus malesuada suscipit. Aliquam erat volutpat. Integer nec odio sed vulputate ligula, sit amet feugiat turpis.",
-  },
-  {
-    phase: "Phase 2",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat nisl sit amet nulla facilisis, ac sodales nunc commodo. Duis tincidunt odio non felis porttitor, nec ultricies velit.",
-  },
-  {
-    phase: "Phase 3",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut erat a lectus sagittis luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-  },
-];
-
 export default function EventDetails() {
   const [showPopup, setShowPopup] = useState(null);
 
+  const events = [
+    {
+      phase: "Phase 1",
+      desc: "Pirates from all corners of the Caribbean gather in New Bedford, Massachusetts. The air is thick with anticipation as crews prepare for the ultimate treasure hunt."
+    },
+    {
+      phase: "Phase 2",
+      desc: "With maps in hand and spirits high, the hunt for the legendary treasure commences. Every clue leads deeper into the mystery of the Caribbean."
+    },
+    {
+      phase: "Phase 3",
+      desc: "Only the most cunning and brave pirates will reach the final showdown. The ultimate treasure awaits those who can solve the final riddle."
+    }
+  ];
+
   return (
-    <section className="event-section">
-      <h1 className="event-heading" > Event Details</h1>
-      <div className="event-container">
+    <section id="events" className="event-details">
+      <h2 className="event-title">Event Phases</h2>
+      <div className="event-cards">
         {events.map((event, index) => (
           <RulebookCard
             key={index}

@@ -1,39 +1,36 @@
 @font-face {
   font-family: 'The Rum is Gone';
   src: url('./assets/fonts/TheRumIsGone-Wy1nG.ttf') format('truetype');
-
 }
-.event-section {
-  padding: 1rem 0;
+
+.event-details {
+  padding: 2rem 0;
   text-align: center;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  background-image: url('./assets/down2.jpg');
-  
+  scroll-margin-top: 80px; /* Ensure proper navigation positioning */
 }
 
-.event-heading {
-  /* font-weight: bold; */
+.event-title {
+  font-family: 'The Rum is Gone', serif;
+  font-size: 3.5rem;
+  font-weight: bold;
   color: black;
-  margin-bottom: 0.25rem;
+  margin-bottom: 2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.event-section h1{
-  font-size: 3.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-.event-container {
+.event-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .event-card {
@@ -42,45 +39,40 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-
   width: 300px;
   height: 450px;
   padding: 20px;
-
   background-image: url("./assets/scroll.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
-  
+  flex-shrink: 0;
 }
 
 .event-phase {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   font-weight: bold;
-  margin-top: 5px;   /* shifted upwards */
-  margin-bottom: 15px;
+  margin-top: 5px;
+ 
 }
 
 .event-desc {
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 95%;     /* 👈 reduced text width by 5% */
-  margin: 0 auto;
+  max-width: 75%;
+  margin: 2.4rem auto;
+  color: black;
 }
 
 .event-btn {
-  margin-top: auto;   /* push button to bottom of card */
-  margin-bottom: 10px; /* small bottom gap */
+  margin-top: auto;
+  margin-bottom: 10px;
   padding: 10px 20px;
-
-  background-color: #d4a017;
+  background-color: #663300;
   color: white;
   font-weight: bold;
-
   border: 2px solid #8b6b12;
   border-radius: 25px;
-
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -92,22 +84,18 @@
 
 /* Responsive Design */
 @media (min-width: 1600px) {
-  .event-section {
+  .event-details {
     padding: 3rem 0;
-    width: 100%;
   }
   
-  .event-container {
+  .event-cards {
     gap: 40px;
-    width: 100%;
+    max-width: 1400px;
   }
   
-  @media (min-width: 1400px) {
-  .event-heading {
-    font-size: 1.5rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
-  }
+  .event-title {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
 }
 
   .event-card {
@@ -118,7 +106,7 @@
   
   .event-phase {
     font-size: 1.7rem;
-    margin-top: 12px;  /* shifted upwards */
+    margin-top: 12px;
     margin-bottom: 20px;
   }
   
@@ -133,22 +121,20 @@
 }
 
 @media (min-width: 1200px) {
-  .event-section {
+  .event-details {
     padding: 2.5rem 0;
-    width: 100%;
   }
   
-  .event-container {
+  .event-cards {
     gap: 35px;
-    width: 100%;
+    max-width: 1200px;
   }
-@media (min-width: 1200px) {
-  .event-heading {
-    font-size: 2.2rem;
-    margin-top: 0.25rem;
-    margin-bottom: 0.4rem;
+  
+  .event-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
   }
-}
+  
   .event-card {
     width: 320px;
     height: 470px;
@@ -157,7 +143,7 @@
   
   .event-phase {
     font-size: 1.6rem;
-    margin-top: 10px;  /* shifted upwards */
+    margin-top: 10px;
     margin-bottom: 18px;
   }
   
@@ -172,24 +158,18 @@
 }
 
 @media (max-width: 932px) {
-  .event-section {
+  .event-details {
     padding: 1.5rem 0;
-    width: 100%;
   }
   
-@media (min-width: 932px) {
-  .event-heading {
-    font-size: 1.8rem;
-    margin-top: 0.15rem;
-    margin-bottom: 0.3rem;
+  .event-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
-}
   
-  .event-container {
+  .event-cards {
     gap: 25px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    max-width: 900px;
   }
   
   .event-card {
@@ -200,13 +180,13 @@
   
   .event-phase {
     font-size: 1.4rem;
-    margin-top: 8px;   /* shifted upwards */
+    margin-top: 8px;
     margin-bottom: 12px;
   }
   
   .event-desc {
     font-size: 0.85rem;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
   }
   
   .event-btn {
@@ -216,22 +196,20 @@
 }
 
 @media (max-width: 768px) {
-  .event-section {
+  .event-details {
     padding: 1rem 0;
-    width: 100%;
+    scroll-margin-top: 60px;
   }
   
-   .event-heading {
-    font-size: 1.6rem;
-    margin-top: 0.1rem;
-    margin-bottom: 0.2rem;
+  .event-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   
-  .event-container {
+  .event-cards {
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 0.5rem;
   }
   
   .event-card {
@@ -242,13 +220,13 @@
   
   .event-phase {
     font-size: 1.3rem;
-    margin-top: 6px;   /* shifted upwards */
+    margin-top: 6px;
     margin-bottom: 10px;
   }
   
   .event-desc {
     font-size: 0.8rem;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
   }
   
   .event-btn {
@@ -257,24 +235,45 @@
   }
 }
 
+@media (max-width: 600px) {
+  .event-details {
+    scroll-margin-top: 50px;
+  }
+  
+  .event-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .event-cards {
+    gap: 18px;
+    max-width: 500px;
+  }
+  
+  .event-card {
+    width: 250px;
+    height: 380px;
+    padding: 14px;
+  }
+}
+
 @media (max-width: 480px) {
-  .event-section {
+  .event-details {
     padding: 0.75rem 0;
-    width: 100%;
+    scroll-margin-top: 40px;
   }
   
-  .event-heading {
-    font-size: 1.4rem;
-    margin-top: 0.08rem;
-    margin-bottom: 0.15rem;
+  .event-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
-  .event-container {
+  .event-cards {
     gap: 15px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    max-width: 300px;
+    padding: 0 0.5rem;
   }
   
   .event-card {
@@ -285,13 +284,13 @@
   
   .event-phase {
     font-size: 1.2rem;
-    margin-top: 7px;   /* shifted upwards */
+    margin-top: 7px;
     margin-bottom: 8px;
   }
   
   .event-desc {
     font-size: 0.75rem;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
   }
   
   .event-btn {
@@ -301,23 +300,19 @@
 }
 
 @media (max-width: 360px) {
-  .event-section {
+  .event-details {
     padding: 0.5rem 0;
-    width: 100%;
+    scroll-margin-top: 30px;
   }
   
-  .event-heading {
-    font-size: 1.2rem;
-    margin-top: 0.05rem;  /* reduced space above heading */
-    margin-bottom: 0.1rem;
-    text-align: center;
+  .event-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
   
-  .event-container {
+  .event-cards {
     gap: 12px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    max-width: 280px;
   }
   
   .event-card {
@@ -328,13 +323,13 @@
   
   .event-phase {
     font-size: 1.1rem;
-    margin-top: 5px;   /* shifted upwards */
+    margin-top: 5px;
     margin-bottom: 6px;
   }
   
   .event-desc {
     font-size: 0.7rem;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
   }
   
   .event-btn {

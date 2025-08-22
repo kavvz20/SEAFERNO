@@ -3,6 +3,7 @@ import Header from './Header';
 import Hero from './Hero';
 import EventDetails from "./EventDetails";
 import Sponsors from "./Sponsors";
+import Contact from './Contact';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Hero />
         <EventDetails />
         <Sponsors />
+        <Contact />
       </main>
     </div>
   );

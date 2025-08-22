@@ -1,8 +1,18 @@
-import React from "react";
-import rulebook from "./assets/rulebook.jpg";
+import React, { useState } from "react";
+import rulebook from "./assets/rulebook1.png";
 import "./RulebookCard.css";
 
 export default function RulebookCard({ phase, desc, index, showPopup, setShowPopup }) {
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setShowPopup(null);
+      setIsClosing(false);
+    }, 300); // Reduced from 800ms to 300ms for faster response
+  };
+
   return (
     <div className="event-card">
       <div>
@@ -13,9 +23,9 @@ export default function RulebookCard({ phase, desc, index, showPopup, setShowPop
         View Details
       </button>
       {showPopup === index && (
-        <div className="popup-overlay" onClick={() => setShowPopup(null)}>
+        <div className="popup-overlay" onClick={handleClose}>
           <div
-            className="popup-content"
+            className={`popup-content ${isClosing ? 'closing' : ''}`}
             onClick={e => e.stopPropagation()}
           >
             <div style={{ position: "relative", display: "inline-block" }}>
@@ -33,7 +43,7 @@ export default function RulebookCard({ phase, desc, index, showPopup, setShowPop
             </div>
             <button
               className="close-btn"
-              onClick={() => setShowPopup(null)}
+              onClick={handleClose}
             >
               ×
             </button>
