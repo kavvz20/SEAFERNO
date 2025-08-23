@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top:0.5rem;
  
 }
 
@@ -37,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sponsor-logo {
-  height: 100px;
+  height: 130px;
   width: auto;
   object-fit: contain;
   background: rgba(255, 255, 255, 0.92);
@@ -54,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   overflow: visible;
   border-radius: 20px;
+
 
   /* Prevent large empty space under scroll */
   margin-bottom: -40px; 
@@ -80,27 +82,26 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
-.sponsors-bg-image { display: block; }
+.sponsors-bg-image { display: block;
+margin-bottom: 5rem; }
 
 .sponsors-rotated-bg-image {
   display: none;
-  transform: scale(0.8);
-  transform-origin: center center;
-  transition: transform 0.5s ease-in-out;
-
-  /* Pull upwards to remove extra blue */
-  margin-top: -60px; 
+  
 }
 
 /* Responsive breakpoint at 932px */
 @media (max-width: 932px) {
-  .sponsors-bg-image { display: none; }
-  
-  .sponsors-rotated-bg-image { 
-    display: block; 
-    transform: scale(0.8);
-    margin-top: -60px; /* shift up */
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-direction: row;
   }
+
   
   .sponsors-heading {
     font-size: 2.8rem;
@@ -108,14 +109,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .sponsors-image-container { 
-    height: auto; 
-    max-width: 900px; 
+    height: 300px; 
+    max-width: 600px; 
     margin-top: 0; 
-    margin-bottom: -30px;
+    flex-direction: row;
+    /* margin-bottom: -30px; */
   }
+  .sponsors-bg-image { display: block;
+margin-bottom: 5rem; }
+.sponsors-rotated-bg-image {
+  display: none;}
 
   .sponsors-image-container .sponsor-logos {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.2rem;
     position: absolute;
     top: 15%;
@@ -131,28 +137,102 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Additional responsive adjustments */
 @media (max-width: 768px) {
+  .sponsors-image-container .sponsor-logos {
+    flex-direction: column;}
   .sponsors-section {
     padding: 0.5rem 0.5rem;
   }
+  .sponsors-bg-image { display: none; }
+  .sponsors-rotated-bg-image {
+    display: block;
+    transform: scale(0.5);
+    margin-top: -200px;
+  }
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.3rem;}
   
   .sponsors-heading {
     font-size: 2.5rem;
   }
   
   .sponsors-image-container { 
-    height: auto; 
-    max-width: 500px; 
+    height: 700px; 
+    max-width: 400px; 
   }
+  .sponsor-logo {
+    height: 90px;
+  }
+
+
+    
+    
 }
 
+
+
 @media (max-width: 480px) {
+  .sponsor-logo {
+    height: 90px;
+  }
+  
   .sponsors-heading {
     font-size: 2rem;
+    margin-top: 1rem;
   }
+
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;}
+
+  .sponsors-rotated-bg-image {
+    height:80%;
+    margin-top: -80px;
+    transform: scale(0.6);
+  }
+
   
   .sponsors-image-container { 
     height: auto; 
     max-width: 400px;
+    margin-top: -75px;
 
+  }}
+
+@media (max-width:360px) {
+  .sponsors-image-container {
+    max-width: 200px;       /* tighter container */
+    height: auto;           /* ✅ auto height = same as rotated image */
+    margin: 0 auto;         /* center it */
+    margin-top: -40px;      /* slight shift up */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsors-rotated-bg-image {
+    width: 100%;
+    height: auto;           /* ✅ keeps proportion */
+    transform: scale(0.8);
+    margin-top: 10px;      /* snug fit */
+  }
+
+  .sponsor-logos {
+    flex-direction: column; /* stack logos */
+    gap: 1rem;
+    margin-top: 2rem;     /* closer to image */
+    position: static;
+  }
+
+  .sponsor-logo {
+    height: 65px;           /* smaller logos */
   }
 }

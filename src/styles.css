@@ -33,6 +33,7 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink);
   display: block;  /* override flex from index.css */
+  overflow-x: hidden;
 }
 
 
@@ -75,8 +76,8 @@ body {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -241,21 +242,40 @@ body {
   position:fixed; left:0; right:0; bottom:0;
   height:180px; pointer-events:none; overflow:hidden;
 }
-.wave{
-  position:absolute; left:0; right:0; bottom:0; height:200px;
-  background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='200' viewBox='0 0 500 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop stop-color='%23c7c0b1' offset='0'/%3E%3Cstop stop-color='%23e3dbcc' offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M0,150 C120,180 240,120 360,150 C420,166 460,166 500,150 V200 H0 Z'/%3E%3C/svg%3E");
+.wave {
+  background-image: url('./assets/waves/wave.svg');
   background-repeat: repeat-x;
   background-size: 500px auto;
   background-position: bottom;
-  animation: wave-x 6s cubic-bezier(.36,.45,.63,.53) infinite, wave-y 6s ease-in-out infinite;
-  opacity:.9;
+  animation: wave-x 6s cubic-bezier(.36,.45,.63,.53) infinite,
+             wave-y 6s ease-in-out infinite;
+  opacity: .9;
 }
-.wave.second{
-  opacity:.55;
+
+.wave.second {
+  opacity: .55;
   animation: wave-x 8s cubic-bezier(.36,.45,.63,.53) -.75s infinite,
              wave-y 8s ease-in-out -2s infinite;
   filter: blur(1px);
 }
+
+.floating-wave {
+  background-image: url('./assets/waves/floating-wave.svg');
+  background-repeat: repeat-x;
+  background-size: 500px auto;
+  background-position: bottom;
+  animation: float-wave-x 8s cubic-bezier(.36,.45,.63,.53) infinite,
+             float-wave-y 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.floating-wave.second {
+  opacity: 0.4;
+  animation: float-wave-x 10s cubic-bezier(.36,.45,.63,.53) -1s infinite,
+             float-wave-y 10s ease-in-out -2s infinite;
+  filter: blur(1px);
+}
+
 
 @keyframes wave-x {
   0% { background-position-x: 0 }
@@ -404,7 +424,11 @@ body {
 @media (max-width: 768px) {
   /* Show hamburger menu */
   .hamburger {
+    width: 30px;
+    height: 25px;
     display: flex;
+    padding:0px;
+    margin-right: 0px;
   }
   
   /* Hide regular nav */
@@ -556,6 +580,7 @@ body {
   .hamburger {
     width: 25px;
     height: 20px;
+    
   }
   
   .hamburger span {
@@ -614,11 +639,13 @@ body {
   
   .brand__logo {
     height: 20px;
+    padding-left: 10px;
   }
   
   .hamburger {
-    width: 22px;
-    height: 18px;
+    width: 40px;
+    height: 40px;
+    padding-right: 0px;
   }
   
   .nav {

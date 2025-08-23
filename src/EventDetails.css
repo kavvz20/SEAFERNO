@@ -180,13 +180,13 @@
   
   .event-phase {
     font-size: 1.4rem;
-    margin-top: 8px;
+    margin-top: 20px;
     margin-bottom: 12px;
   }
   
   .event-desc {
     font-size: 0.85rem;
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
   }
   
   .event-btn {
@@ -220,7 +220,7 @@
   
   .event-phase {
     font-size: 1.3rem;
-    margin-top: 6px;
+    margin-top: 26px;
     margin-bottom: 10px;
   }
   
@@ -284,13 +284,13 @@
   
   .event-phase {
     font-size: 1.2rem;
-    margin-top: 7px;
+    margin-top: 28px;
     margin-bottom: 8px;
   }
   
   .event-desc {
     font-size: 0.75rem;
-    margin-top: 0.8rem;
+    margin-top: 1.3rem;
   }
   
   .event-btn {
@@ -317,23 +317,25 @@
   
   .event-card {
     width: 220px;
-    height: 350px;
+    height: 300px;
     padding: 10px;
   }
   
   .event-phase {
-    font-size: 1.1rem;
-    margin-top: 5px;
+    font-size: 1rem;
+    margin-top: 8px;
     margin-bottom: 6px;
   }
   
   .event-desc {
+  
     font-size: 0.7rem;
-    margin-top: 0.8rem;
+    margin-top: 1.4rem;
   }
   
   .event-btn {
     padding: 6px 12px;
     font-size: 0.8rem;
+    margin: 30px;
   }
 }
