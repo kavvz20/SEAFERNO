@@ -286,22 +286,19 @@
   }
 
   .contact-heading {
-    top: 8%;   /* ✅ use top positioning, not margin-top hack */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(1.8rem, 4vw + 1rem, 2.2rem);
-    text-align: center;
-    margin-top: 0;   /* ✅ remove negative margin */
+    top: 2%;
+    font-size: clamp(2rem, 3.5vw + 1rem, 1.6rem);
     white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    margin-top: -4rem;
   }
-
+  
   .contact-form-container {
-    max-width: 400px;
-    margin-top: 10rem;
-    background: transparent; /* ✅ so body bg shows */
-  }
-
-
+    max-width: 350px;
+   
+    margin-top:10rem;
+   }
 
   .form-submit-btn {
     padding: 7px 12px;
@@ -328,6 +325,17 @@
     box-shadow: none; /* remove any white shadows if present */
 }
 
+.contact-section {
+  background: transparent !important;   /* remove white/solid background */
+}
+
+.contact-image-wrap,
+.contact-form-container,
+.contact-content-overlay {
+  background: transparent !important;   /* ensure no child blocks background */
+  box-shadow: none;                     /* remove any white shadow/glow */
+}
+
 }
 
 
@@ -349,15 +357,16 @@
   .contact-heading {
     top: 2%;
     font-size: clamp(2rem, 3.5vw + 1rem, 1.6rem);
-    text-align: center;
-    margin-top: -1rem;
+    margin-top: 3rem;
     white-space: nowrap;
+    position: absolute;
+    text-align: center;
   }
   
   .contact-form-container {
     max-width: 350px;
     padding: 0.8rem;
-    margin-top:1rem;
+    margin-top:6rem;
    }
  
   .contact-content-overlay {
